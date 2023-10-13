@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :todo_trek, TodoTrek.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: System.get_env("ARPAGEO_DB_USER"),
+  password: System.get_env("ARPAGEO_DB_PASSWORD"),
   hostname: "localhost",
   database: "forms_dev",
   stacktrace: true,
